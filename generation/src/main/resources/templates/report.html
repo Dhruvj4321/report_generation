@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spring Boot Frontend</title>
+    
+    <style>
+		
+		
+        
+
+        /* CSS for the logo */
+        .logo {
+            display: block;
+            margin: 0 auto;
+            width: 200px; /* Adjust the width as needed */
+            height: auto;
+        }
+    
+		
+		
+        
+    </style>
+</head>
+<body>
+	
+	<div style="text-align: center;">
+        <img class="logo" src="/static/Images/MyGalf.PNG" alt="MyGalf Logo" th:src="@{Images/MyGalf.PNG}"/>
+    </div>
+	
+    <h1>Survey Results</h1>
+    <div class="iframe-container">
+        <div th:if="${nutrition != null}">
+        <iframe
+    src="http://localhost:3000/public/question/cec2a57a-22ad-4ec7-a844-fb73013656c0"
+    frameborder="0"
+    width="800"
+    height="600"
+    allowtransparency
+></iframe>
+    </div>
+        <div th:if="${emotion != null}">
+        <iframe
+    src="http://localhost:3000/public/question/996fc11a-e50e-440b-912f-840d6f16bc50"
+    frameborder="0"
+    width="800"
+    height="600"
+    allowtransparency
+></iframe>
+    </div>
+        <div th:if="${time != null}">
+        <iframe
+    src="http://localhost:3000/public/question/8212edbe-5f1b-4229-bcfa-62c20af45265"
+    frameborder="0"
+    width="800"
+    height="600"
+    allowtransparency
+></iframe>
+    </div>
+        <div th:if="${newsletter != null}">
+        <iframe
+    src="http://localhost:3000/public/question/aa7f9463-bb29-400b-ae4a-599224e89c40"
+    frameborder="0"
+    width="800"
+    height="600"
+    allowtransparency
+></iframe>
+    </div>
+    </div>
+    
+    
+    
+</body>
+</html>
